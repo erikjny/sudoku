@@ -1,4 +1,4 @@
-# Oblig 3 - erikjny
+# SUDOKU med GUI
 
 Dette er min besvarelse på Oblig 3. Jeg har benyttet meg av prekoden som ble lagt ut. Med en liten modifikasjon i Oblig3-filen som er følgende 2 linjer: 
 ```java
