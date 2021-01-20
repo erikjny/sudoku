@@ -1,6 +1,7 @@
-# SUDOKU med GUI
+# SUDOKU-løser med GUI
 
-Dette er min besvarelse på Oblig 3. Jeg har benyttet meg av prekoden som ble lagt ut. Med en liten modifikasjon i Oblig3-filen som er følgende 2 linjer: 
+Dette er et lite prosjekt jeg gjorde for å repetere python. Programmet er en sudoku-løser med et simpelt GUI for å ha muligheten til å legge inn tall selv som da blir løst når du trykker på "Solve"-knappen.
+
 ```java
         new File("outputs").mkdirs();
 
