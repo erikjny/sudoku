@@ -9,4 +9,4 @@ Programmet består av:
 - `settings.py` som inneholder diverse verdier som brukes ofte som f.eks `WIDTH`, `HEIGHT` og fargene som brukes++
 - `solver.py` hvor logikken bak selve sudoku-løsingen ligger.
 
-![alt text](https://github.com/erikjny/sudoku/blob/master/sudoku_unsolved?raw=true)
+![alt text](https://github.com/erikjny/sudoku/blob/master/sudoku_unsolved.png?raw=true)
