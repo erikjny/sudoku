@@ -14,5 +14,7 @@ Programmet består av:
   python main.py
 ```
 
+### Det burde da se slik ut:
+
 ![alt text](https://github.com/erikjny/sudoku/blob/master/sudoku_unsolved.png?raw=true)
 
