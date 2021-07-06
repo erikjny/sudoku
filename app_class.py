@@ -48,7 +48,7 @@ class App:
                     puzzle[self.selected[0]][self.selected[1]] = -1
                 # ARROW KEYS TO MOVE ON THE BOARD
                 elif event.key == pg.K_UP:
-                    new_list = list(self.selected[0])
+                    new_list = list(self.selected)
                     new_list[1] = (new_list[1]-1)%9
                     self.selected = new_list
                 elif event.key == pg.K_DOWN:
@@ -63,7 +63,6 @@ class App:
                     new_list = list(self.selected)
                     new_list[0] = (new_list[0]+1)%9
                     self.selected = new_list
-
 
     def draw(self):
         self.window.fill(WHITE)
