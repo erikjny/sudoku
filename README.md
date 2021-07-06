@@ -11,7 +11,7 @@ Programmet består av:
 
 ## Krav
 - python3 
-- pygame, se [Installer pygame](https://github.com/erikjny/Cocktails#installer-pygame)  
+- pygame, se [Installer pygame](https://github.com/erikjny/sudoku#installer-pygame)  
 
 ## Programmet kan kjøres med følgende kommando
 ```
