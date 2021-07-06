@@ -4,6 +4,7 @@ import sys
 from settings import *
 from solver import Solver
 
+# EN KOMMENTAR
 class App:
     def __init__(self):
         pg.init()
