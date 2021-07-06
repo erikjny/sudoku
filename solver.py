@@ -7,8 +7,8 @@ class Solver:
         self.surface = surface
         self.font = pg.font.SysFont("arial", cellSize//2)
 
-    def solve_sudoku(self):
-        row, col = self.find_next_empty(puzzle)
+    def solveSudoku(self):
+        row, col = self.findNextEmpty(puzzle)
 
         # Puzzle is solved
         if row is None:
@@ -19,13 +19,13 @@ class Solver:
         for guess in range(1, 10):
             if self.isValid(puzzle, guess, row, col):
                 puzzle[row][col] = guess
-                self.update_cell(guess, row, col)
-                if self.solve_sudoku():
+                self.updateCell(guess, row, col)
+                if self.solveSudoku():
                     return True
         puzzle[row][col] = -1
-        self.remove_guess(row, col)
+        self.removeGuess(row, col)
 
-    def find_next_empty(self, puzzle):
+    def findNextEmpty(self, puzzle):
         for row in range(9):
             for col in range(9):
                 if puzzle[row][col] == -1:
@@ -54,7 +54,7 @@ class Solver:
         return True
 
     # Show new guess on board
-    def update_cell(self, guess, row, col):
+    def updateCell(self, guess, row, col):
         text = self.font.render(str(guess), True, BLACK, WHITE)
         text_rect = text.get_rect()
         text_rect.center = ((gridPos[0] + (row+1)*(cellSize)) - cellSize/2, (gridPos[1] + (col+1)*(cellSize))- cellSize/2)
@@ -62,6 +62,6 @@ class Solver:
         pg.display.update()
 
     # Remove last guess from board
-    def remove_guess(self, row, col):
+    def removeGuess(self, row, col):
         pg.draw.rect(self.surface, WHITE, ((row)*(cellSize)+gridPos[0]+2, (col)*cellSize+gridPos[1]+2, cellSize-4, cellSize-4))
         pg.display.update()

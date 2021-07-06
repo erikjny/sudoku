@@ -9,6 +9,10 @@ Programmet består av:
 - `settings.py` som inneholder diverse verdier som brukes ofte som f.eks dimensjoner på brettet, farger og det 2-dimensjonale arrayet som representerer brettet.
 - `solver.py` hvor logikken bak selve sudoku-løsingen ligger.
 
+## Krav
+- python3 
+- pygame, se  
+
 ## Programmet kan kjøres med følgende kommando
 ```
   python main.py
@@ -21,3 +25,15 @@ Programmet består av:
 ### Logikk bak løsingen
 
 Når `Solve`-knappen trykkes kalles `solve_sudoku`-metoden i solve-klassen som forsøker å løse brettet rekursivt. Den bruker noen hjelpemetoder; `isValid` og `find_next_empty` for å "gjette" seg fram til hva som er løsningen og backtracker dersom gjettingen viser seg å være feil. 
+
+
+### Installer pygame
+Den enkleste måten er å installere med pip, som kan installeres gjennom brew.
+Dersom brew ikke er installert:
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Deretter installer python + pip
+```sh
+(brew --prefix)/opt/python/libexec/bin
+```

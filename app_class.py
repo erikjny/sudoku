@@ -8,8 +8,8 @@ class App:
     def __init__(self):
         pg.init()
         self.running = True
-        self.mousePos = None
-        self.selected = None
+        self.mousePos = (0,0)
+        self.selected = (0,0)
         self.grid = testBoard
         self.font = pg.font.SysFont("arial", cellSize//2)
         self.window = pg.display.set_mode((WIDTH, HEIGHT))
@@ -48,7 +48,7 @@ class App:
                     puzzle[self.selected[0]][self.selected[1]] = -1
                 # ARROW KEYS TO MOVE ON THE BOARD
                 elif event.key == pg.K_UP:
-                    new_list = list(self.selected)
+                    new_list = list(self.selected[0])
                     new_list[1] = (new_list[1]-1)%9
                     self.selected = new_list
                 elif event.key == pg.K_DOWN:
@@ -71,17 +71,17 @@ class App:
             self.drawSelection(self.window, self.selected)
         if self.solve_btn.draw():
             self.drawNumbers(self.window)
-            self.draw_grid(self.window)
-            self.solver.solve_sudoku()
+            self.drawGrid(self.window)
+            self.solver.solveSudoku()
         if self.reset_btn.draw():
             for i in range(9):
                 for y in range(9):
                     puzzle[i][y] = -1
-        self.draw_grid(self.window)
+        self.drawGrid(self.window)
         self.drawNumbers(self.window)
         pg.display.update()
 
-    def draw_grid(self, window):
+    def drawGrid(self, window):
         pg.draw.rect(window, BLACK, (gridPos[0], gridPos[1], WIDTH -150, HEIGHT -150), 2)
         for x in range(9):
             pg.draw.line(window, BLACK, (gridPos[0], gridPos[1]+(x*cellSize)), (gridPos[0]+450, gridPos[1]+(x*cellSize)), 2 if x % 3 == 0 else 1)
