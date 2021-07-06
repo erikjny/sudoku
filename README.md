@@ -11,7 +11,7 @@ Programmet består av:
 
 ## Krav
 - python3 
-- pygame, se  
+- pygame, se [Installer pygame](https://github.com/erikjny/Cocktails#installer-pygame)  
 
 ## Programmet kan kjøres med følgende kommando
 ```
@@ -26,7 +26,6 @@ Programmet består av:
 
 Når `Solve`-knappen trykkes kalles `solve_sudoku`-metoden i solve-klassen som forsøker å løse brettet rekursivt. Den bruker noen hjelpemetoder; `isValid` og `find_next_empty` for å "gjette" seg fram til hva som er løsningen og backtracker dersom gjettingen viser seg å være feil. 
 
-
 ### Installer pygame
 Den enkleste måten er å installere med pip, som kan installeres gjennom brew.
 Dersom brew ikke er installert:
@@ -36,4 +35,8 @@ Dersom brew ikke er installert:
 Deretter installer python + pip
 ```sh
 (brew --prefix)/opt/python/libexec/bin
+```
+Installer pygame
+```sh
+pip3 install pygame
 ```
