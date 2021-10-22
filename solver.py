@@ -1,4 +1,6 @@
 import time
+
+from pygame import draw
 from settings import *
 from app_class import *
 
@@ -12,6 +14,7 @@ class Solver:
 
         # Puzzle is solved
         if row is None:
+            # draw()
             return True
 
         # Not solved

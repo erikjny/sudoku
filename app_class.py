@@ -19,6 +19,7 @@ class App:
         self.solver = Solver(self.window)
 
     def run(self):
+        self.window.fill(WHITE)
         while self.running:
             self.events()
             self.draw()
@@ -66,13 +67,15 @@ class App:
                     self.selected = new_list
 
     def draw(self):
-        self.window.fill(WHITE)
         if self.selected:
+            self.window.fill(WHITE)
             self.drawSelection(self.window, self.selected)
         if self.solve_btn.draw():
             self.drawNumbers(self.window)
             self.drawGrid(self.window)
-            self.solver.solveSudoku()
+
+            if self.solver.solveSudoku():
+                return True;
         if self.reset_btn.draw():
             for i in range(9):
                 for y in range(9):
