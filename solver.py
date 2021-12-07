@@ -40,14 +40,15 @@ class Solver:
         return None, None
 
     def isValid(self, puzzle, guess, row, col):
-        # Check if guess is in row
-        row_vals = puzzle[row]
-        if guess  in row_vals:
-            return False
 
         # Check if guess is in column
         col_vals = [puzzle[v][col] for v in range(9)]
         if guess in col_vals:
+            return False
+
+        # Check if guess is in row
+        row_vals = puzzle[row]
+        if guess  in row_vals:
             return False
 
         # Check if guess is in 3x3 grid
