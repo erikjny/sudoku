@@ -5,6 +5,7 @@ from settings import *
 from app_class import *
 
 class Solver:
+    ## Some comment
     def __init__(self, surface):
         self.surface = surface
         self.font = pg.font.SysFont("arial", cellSize//2)
