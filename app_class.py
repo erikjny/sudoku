@@ -5,6 +5,7 @@ from settings import *
 from solver import Solver
 
 # EN KOMMENTAR
+# EN KOMMENTAR Til
 class App:
     def __init__(self):
         pg.init()
