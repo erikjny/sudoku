@@ -61,11 +61,7 @@ class Solver:
 
     # Show new guess on board
     def updateCell(self, guess, row, col):
-        text = self.font.render(str(guess), True, BLACK, WHITE)
-        text_rect = text.get_rect()
-        text_rect.center = ((gridPos[0] + (row+1)*(cellSize)) - cellSize/2, (gridPos[1] + (col+1)*(cellSize))- cellSize/2)
-        self.surface.blit(text, text_rect)
-        pg.display.update()
+        ## This is the same function but without functionality :(
 
     # Remove last guess from board
     def remGuess(self, row, col):
