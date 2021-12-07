@@ -10,6 +10,7 @@ class Solver:
         self.font = pg.font.SysFont("arial", cellSize//2)
 
     # Left another comment here
+    # Left another comment here
     def solveSudoku(self):
         row, col = self.findNextEmpty(puzzle)
 
