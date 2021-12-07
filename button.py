@@ -3,6 +3,7 @@ from settings import *
 vec = pg.math.Vector2
 
 class Button:
+# EN KOMMENTAR
     def __init__(self, surface, x, y, text):
         self.surface = surface
         self.x = x
