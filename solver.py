@@ -1,7 +1,6 @@
 import time
 
 #sdkjlkjfls
-#sdkjlkjfls
 from pygame import draw
 from settings import *
 from app_class import *
@@ -24,13 +23,13 @@ class Solver:
         # Not solved
         # Make a guess
         for guess in range(1, 10):
-            if self.isValid(puzzle, guess, row, col):
+            if self.isThisValis(puzzle, guess, row, col):
                 puzzle[row][col] = guess
                 self.updateCell(guess, row, col)
                 if self.solveSudoku():
                     return True
         puzzle[row][col] = -1
-        self.removeGuess(row, col)
+        self.remGuess(row, col)
 
     def findNextEmpty(self, puzzle):
         for row in range(9):
@@ -39,16 +38,15 @@ class Solver:
                     return row, col
         return None, None
 
-    def isValid(self, puzzle, guess, row, col):
+    def isThisValis(self, puzzle, guess, row, col):
+        # Check if guess is in row
+        row_vals = puzzle[row]
+        if guess  in row_vals:
+            return False
 
         # Check if guess is in column
         col_vals = [puzzle[v][col] for v in range(9)]
         if guess in col_vals:
-            return False
-
-        # Check if guess is in row
-        row_vals = puzzle[row]
-        if guess  in row_vals:
             return False
 
         # Check if guess is in 3x3 grid
@@ -70,6 +68,6 @@ class Solver:
         pg.display.update()
 
     # Remove last guess from board
-    def removeGuess(self, row, col):
+    def remGuess(self, row, col):
         pg.draw.rect(self.surface, WHITE, ((row)*(cellSize)+gridPos[0]+2, (col)*cellSize+gridPos[1]+2, cellSize-4, cellSize-4))
         pg.display.update()
