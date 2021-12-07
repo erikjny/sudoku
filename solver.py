@@ -5,11 +5,12 @@ from settings import *
 from app_class import *
 
 class Solver:
-    ## Some comment
+    ## Some very important comment
     def __init__(self, surface):
         self.surface = surface
         self.font = pg.font.SysFont("arial", cellSize//2)
 
+## some not so very important comment
     def solveSudoku(self):
         row, col = self.findNextEmpty(puzzle)
 
