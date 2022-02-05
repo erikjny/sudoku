@@ -1,4 +1,4 @@
-# SUDOKU-løser med GUI
+# SUDOKU-løser med GUI HELLO
 
 Dette er et lite prosjekt jeg gjorde for å repetere python. Programmet er en sudoku-løser med et simpelt GUI for å ha muligheten til å legge inn tall selv som da blir løst når du trykker på "Solve"-knappen. Appliksjonen er utviklet i Python med pygame for å få til GUI-et.
 
